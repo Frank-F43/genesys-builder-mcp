@@ -1,0 +1,7 @@
+# Cached Genesys Cloud OpenAPI spec, ~22 MB. A reproducible download, not
+# source: a committed copy is stale within weeks and weighs down every clone.
+# Refresh it with scripts/fetch_api_spec.py.
+#
+# This lives here rather than in the working repository's root .gitignore so
+# that the rule travels into the published copy, where toolkit/ is the root.
+reference/swagger/

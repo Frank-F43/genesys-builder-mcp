@@ -1,0 +1,6 @@
+{
+  "yaml.schemas": {
+    "./schemas/ArchyFlow.schema.json":   "*Flow.yaml",
+    "./schemas/ArchyCommon.schema.json": "common*.yaml"
+  }
+}

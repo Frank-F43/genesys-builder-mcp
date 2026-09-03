@@ -1,0 +1,37 @@
+[
+    {
+        "key": "alt+a alt+c",
+        "command": "workbench.action.tasks.runTask",
+        "args": "archy create"
+    },
+    {
+        "key": "alt+a alt+r",
+        "command": "workbench.action.tasks.runTask",
+        "args": "archy refresh"
+    },
+    {
+        "key": "alt+a alt+v",
+        "command": "workbench.action.tasks.runTask",
+        "args": "archy version"
+    },
+    {
+        "key": "alt+a alt+d",
+        "command": "workbench.action.tasks.runTask",
+        "args": "archy dump"
+    },
+    {
+        "key": "alt+a alt+s",
+        "command": "workbench.action.tasks.runTask",
+        "args": "archy setup"
+    },
+    {
+        "key": "alt+a alt+g",
+        "command": "workbench.action.tasks.runTask",
+        "args": "archy configure"
+    },
+    {
+        "key": "alt+a alt+p",
+        "command": "workbench.action.tasks.runTask",
+        "args": "archy preprocess"
+    },
+]

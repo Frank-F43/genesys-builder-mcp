@@ -1,0 +1,21 @@
+[project]
+name = "genesys-builder-mcp"
+version = "0.1.0"
+description = "MCP server for building and modifying Genesys Cloud configuration from an AI coding IDE"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=2.1",
+    "httpx>=0.27",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+genesys-builder-mcp = "genesys_builder_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/genesys_builder_mcp"]

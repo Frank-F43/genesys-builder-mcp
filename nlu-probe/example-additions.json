@@ -1,0 +1,23 @@
+{
+  "Support EN": {
+    "Schedule Appointment": [
+      "I'd like to arrange a phone call for tomorrow.",
+      "Could we push my consultation to the following week?",
+      "Do you have availability on Wednesday afternoon?"
+    ],
+    "Check Status": [
+      "I'm wondering if there's been any progress on my file.",
+      "Can you look up the current stage of my request?",
+      "Has anything changed since I last called?"
+    ],
+    "Complaint": [
+      "I've called three times and still have no resolution.",
+      "Please escalate this — I'm not getting anywhere.",
+      "I'm unhappy with the service I've received so far."
+    ],
+    "Validate Customer Details": [
+      "I'll just run through a quick security check with you.",
+      "May I confirm the name and reference number on your account?"
+    ]
+  }
+}
