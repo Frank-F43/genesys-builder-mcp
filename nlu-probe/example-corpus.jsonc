@@ -1,0 +1,95 @@
+{
+  // Example corpus for toolkit/nlu-probe/probe.py
+  // Top-level keys = exact Copilot assistant name in Genesys Cloud (list_copilots).
+  //
+  // Industry-neutral template — replace intents and sentences with your own demo script.
+  //
+  // messpunkte: Demo script lines — MEASURE only, NEVER train.
+  //   role: AGENT/CUSTOMER — documents WHO speaks; does not affect the NLU API,
+  //   but drives participantRoles in Copilot rules (Agent vs Customer).
+  //
+  // intents: Paraphrases for training quality checks (different wording than messpunkte!).
+  //
+  // grenzfaelle: Ambiguous sentences — check separation after each training round.
+  // ausserhalb: Off-topic — should hit catch-all intent (Other), not a business rule.
+  // negativ: Sentence + forbidden intent — must stay below the Copilot threshold.
+
+  "Support EN": {
+    "messpunkte": {
+      "Validate Customer Details": [
+        {
+          "role": "AGENT",
+          "text": "Before we continue, I need to verify a few details with you. Can we go through that together?"
+        }
+      ],
+      "Schedule Appointment": [
+        {
+          "role": "CUSTOMER",
+          "text": "I'd like to move my appointment to next Thursday if that's possible."
+        }
+      ],
+      "Check Status": [
+        {
+          "role": "CUSTOMER",
+          "text": "Can you tell me where my request stands? I submitted it last week."
+        }
+      ],
+      "Complaint": [
+        {
+          "role": "CUSTOMER",
+          "text": "I've been waiting for weeks and nobody has gotten back to me. I want this escalated."
+        }
+      ]
+    },
+    "intents": {
+      "Schedule Appointment": [
+        "Can I book a time to speak with someone?",
+        "I need to reschedule my callback for Friday afternoon.",
+        "Is there an earlier slot available this week?",
+        "Please set up a meeting for next Monday morning."
+      ],
+      "Check Status": [
+        "What's the latest on my case?",
+        "Has my application been reviewed yet?",
+        "Where are we with my open ticket?",
+        "I submitted paperwork two days ago — any update?"
+      ],
+      "Complaint": [
+        "This is unacceptable — I want to speak to a supervisor.",
+        "I'm really frustrated with how long this is taking.",
+        "Nobody follows up when they say they will.",
+        "I need to file a formal complaint about this experience."
+      ],
+      "Validate Customer Details": [
+        "Let me confirm your account information.",
+        "I'll need to verify your identity before we proceed.",
+        "Can you confirm your date of birth and mailing address?"
+      ],
+      "Other": [
+        "What are your opening hours?",
+        "Do you have a branch near the city center?",
+        "How do I reset my online password?"
+      ]
+    },
+    "grenzfaelle": [
+      "Why hasn't anyone responded to my request yet?",
+      "When will I hear back about the issue I reported?",
+      "Can someone call me about the problem I logged yesterday?"
+    ],
+    "ausserhalb": [
+      "What's the weather like today?",
+      "Can you recommend a good restaurant nearby?",
+      "Who won the game last night?"
+    ],
+    "negativ": [
+      {
+        "text": "Yes, that's the correct address on file.",
+        "soll_nicht": "Validate Customer Details"
+      },
+      {
+        "text": "I'm just checking in — no rush on my end.",
+        "soll_nicht": "Complaint"
+      }
+    ]
+  }
+}
