@@ -1,0 +1,5 @@
+# Measurement output. probe.py rewrites these on every run, so a committed copy
+# is stale the moment anyone measures. Keep the corpora in git, not the scores.
+results.json
+results_demo.json
+results_holdout.json
